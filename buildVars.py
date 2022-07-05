@@ -11,22 +11,23 @@ addon_info = {
 	# for previously unpublished addons, please follow the community guidelines at:
 	# https://bitbucket.org/nvdaaddonteam/todo/raw/master/guideLines.txt
 	# add-on Name, internal for nvda
-	"addon_name" : "addonTemplate",
+	"addon_name" : "virtualbox",
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on to be shown on installation and add-on information.
-	"addon_summary" : _("Add-on user visible name"),
+	"addon_summary" : _("virtualbox"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("""Description for the add-on.
-It can span multiple lines."""),
+	"addon_description" : _("""Verbessert die Zugänglichkeit von Virtualbox mit NVDA.
+"""),
 	# version
-	"addon_version" : "x.y",
+	"addon_version" : "0.1",
 	# Author(s)
-	"addon_author" : u"name <name@domain.com>",
+	"addon_author" : u"david Parduhn <xkill85@gmx.net>",
 	# URL for the add-on documentation support
 	"addon_url" : None,
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
+    "lastTestedNVDAVersion": "2022.1",
 }
 
 
