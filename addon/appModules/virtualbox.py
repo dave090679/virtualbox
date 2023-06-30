@@ -10,7 +10,8 @@ import api
 from NVDAObjects.UIA import UIA, ListItem
 from scriptHandler import script
 import addonHandler
-addonHandler.initTranslation()
+#addonHandler.initTranslation()
+
 class VBoxList(UIA):
 	def event_UIA_elementSelected(self):
 		for child in self.children:
@@ -23,6 +24,7 @@ class VBoxList(UIA):
 				ui.message(child.name)
 				return child
 		return None
+
 class VBoxListItem(ListItem):
 	@script (
 		description=_("display the selected list item with nvda"),
@@ -34,11 +36,23 @@ class VBoxListItem(ListItem):
 		for child in self.parent.children:
 			if controlTypes.State.SELECTED in child.states:
 				ui.message(child.name)
-
-
 	def event_gainFocus(self):
 		if controlTypes.State.SELECTED in self.states:
 			self.setFocus()
+class VBoxHeaderItem(UIA):
+#	@script (
+#		description=_("display the selected list item with nvda"),
+#		gestures=["kb:downArrow","kb:upArrow"],
+#		category=_("virtualbox")
+#	)
+#	def script_selectitem(self, gesture):
+#		gesture.send()
+#		for child in self.parent.children:
+#			if controlTypes.State.SELECTED in child.states:
+#				ui.message(child.name)
+	def event_UIA_elementSelected(self):
+		ui.message(self.name)
+
 
 class AppModule(appModuleHandler.AppModule):
 	def chooseNVDAObjectOverlayClasses(self, obj, clslist):
@@ -47,3 +61,5 @@ class AppModule(appModuleHandler.AppModule):
 				clslist.insert(0, VBoxList)
 			elif obj.role == controlTypes.Role.LISTITEM:
 				clslist.insert(0, VBoxListItem)
+			elif obj.role == controlTypes.Role.HEADERITEM:
+				clslist.insert(0,VBoxHeaderItem)

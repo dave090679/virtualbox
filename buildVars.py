@@ -20,7 +20,7 @@ addon_info = {
 	"addon_description" : _("""Verbessert die Zugänglichkeit von Virtualbox mit NVDA.
 """),
 	# version
-	"addon_version" : "0.3",
+	"addon_version" : "0.4",
 	# Author(s)
 	"addon_author" : u"david Parduhn <xkill85@gmx.net>",
 	# URL for the add-on documentation support
