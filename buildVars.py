@@ -17,14 +17,14 @@ addon_info = {
 	"addon_summary" : _("virtualbox"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description" : _("""Verbessert die Zugänglichkeit von Virtualbox mit NVDA.
+	"addon_description" : _("""improve accessibility of virtualbox with nvda.
 """),
 	# version
 	"addon_version" : "0.5",
 	# Author(s)
 	"addon_author" : u"david Parduhn <xkill85@gmx.net>",
 	# URL for the add-on documentation support
-	"addon_url" : None,
+	"addon_url" : "https://github.com/dave090679/virtualbox/releases",
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 "lastTestedNVDAVersion": "2024.1",
